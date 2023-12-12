@@ -1,14 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import * as dotenv from 'dotenv'
-
 
 function App() {
 
-  
-dotenv.config()
+  const apiKey = process.env.REACT_APP_FIREBASE_API_KEY;
 
-console.log({apiKey: process.env.REACT_APP_FIREBASE_API_KEY})
+console.log({apiKey: apiKey})
 
   return (
     <div className="App">
