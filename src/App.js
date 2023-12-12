@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import * as dotenv from 'dotenv'
+
 
 function App() {
+
+  
+dotenv.config()
 
 console.log({apiKey: process.env.REACT_APP_FIREBASE_API_KEY})
 
