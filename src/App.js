@@ -1,11 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 function App() {
 
   const apiKey = process.env.REACT_APP_FIREBASE_API_KEY;
 
-console.log({apiKey: apiKey})
+// console.log({apiKey: apiKey})
+
+axios.get(`http://localhost:3000/user/${apiKey}`)
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
 
   return (
     <div className="App">
